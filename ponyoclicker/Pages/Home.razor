@@ -1,0 +1,162 @@
+﻿@page "/"
+
+<PageTitle>Ponyo Clicker</PageTitle>
+
+
+<h1>✨Ponyo Clicker✨</h1>
+<div class="main-container">
+    <p role="status">Snacks Ponyo Har Spist: @currentCount</p>
+
+    <img src="@PonyoImage" width="150" />
+    <br /><br />
+
+    <button class="btn-snacks" @onclick="FeedPonyo">🍟Snacks🍟</button>
+
+    <br /><br />
+
+    <!-- Upgrade knap -->
+    <button class="btn-autosnack" @onclick="BuyAutoSnack">
+        Køb 🧸 (Koster: 20 snacks)
+    </button>
+
+    <p><br />En 🧸 giver 1 automatisk snack i sekundet</p>
+    <p>Antal Bamser: @autoSnackLevel</p>
+
+    <!-- Progress bar -->
+    <p class="progress-text">Næste Ponyo Level:</p>
+
+    <div class="progress-kawaii">
+        <div class="progress-fill" style="width:@Progress%">
+            <span class="progress-emojis">🍟🍔</span>
+        </div>
+    </div>
+
+    <!-- Bobler -->
+    <div style="position: relative; height: 50px;">
+        @foreach (var b in bubbles)
+        {
+            <span class="bubble"
+                  style="left:@b.LeftPx; top:@b.TopPx;">💖</span>
+        }
+    </div>
+
+</div>
+
+@code {
+    // hvor mange snacks Ponyo har spist
+    private int currentCount = 0;
+
+    //hvor mange auto snacks har spilleren købt
+    private int autoSnackLevel = 0;
+
+    // timer der giver snacks automatisk
+    private System.Timers.Timer? autoTimer;
+
+    // deklaretion af bobler
+    private List<Bubble> bubbles = new();
+
+    // 
+    private Random rand = new();
+
+    // variabel til levels
+    private int[] levels = { 0, 100, 250, 500, 750, 1000 };
+
+    // metode der kører når man klikker
+    private void FeedPonyo()
+    {
+        currentCount++;
+        AddBubble();
+    }
+
+    // køber auto snack upgrade
+    private void BuyAutoSnack()
+    {
+        if (currentCount >= 20)
+        {
+            currentCount -= 20;
+            autoSnackLevel++;
+
+            StartAutoSnacks();
+        }
+    }
+
+    // starter auto snacks
+    private void StartAutoSnacks()
+    {
+        if (autoTimer == null)
+        {
+            autoTimer = new System.Timers.Timer(1000);
+
+            autoTimer.Elapsed += (sender, e) =>
+            {
+                currentCount += autoSnackLevel;
+
+                InvokeAsync(StateHasChanged);
+            };
+
+            autoTimer.Start();
+        }
+    }
+
+    // levels til spillet
+    private int CurrentLevel
+    {
+        get
+        {
+            for (int i = levels.Length - 1; i >= 0; i--)
+            {
+                if (currentCount >= levels[i])
+                    return i;
+            }
+            return 0;
+        }
+    }
+
+    // bestemmer hvilket Ponyo billede der skal vises
+    private string PonyoImage
+    {
+        get
+        {
+            return $"images/level{CurrentLevel + 1}.png";
+        }
+    }
+
+    // progress bar beregning
+    private int Progress
+    {
+        get
+        {
+            if (CurrentLevel == levels.Length - 1)
+                return 100;
+
+            int levelStart = levels[CurrentLevel];
+            int levelEnd = levels[CurrentLevel + 1];
+
+            int progress = currentCount - levelStart;
+            int range = levelEnd - levelStart;
+
+            return progress * 100 / range;
+        }
+    }
+
+
+    // Boble animuation
+    private void AddBubble()
+    {
+        bubbles.Add(new Bubble
+        {
+            LeftPx = $"{rand.Next(0, 250)}px",
+            TopPx = "40px"
+        });
+
+
+    }
+
+    private class Bubble
+    {
+        public string LeftPx { get; set; } = "";
+        public string TopPx { get; set; } = "";
+    }
+
+
+}
