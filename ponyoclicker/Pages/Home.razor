@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime JS
 
 <PageTitle>Ponyo Clicker</PageTitle>
 
@@ -61,15 +62,35 @@
     // variabel til levels
     private int[] levels = { 0, 100, 250, 500, 750, 1000 };
 
+    // gem progress i localStorage
+    private async Task SaveProgress()
+    {
+        await JS.InvokeVoidAsync("localStorage.setItem", "snackCount", currentCount);
+        await JS.InvokeVoidAsync("localStorage.setItem", "autoSnackLevel", autoSnackLevel);
+    }
+
+    // Indlæs progress fra localStorage
+    protected override async Task OnInitializedAsync()
+    {
+        var savedCount = await JS.InvokeAsync<string>("localStorage.getItem", "snackCount");
+        var savedLevel = await JS.InvokeAsync<string>("lovalStorage.getItem", "autoSnackLevel");
+
+        if (savedCount != null) currentCount = int.Parse(savedCount);
+        if (savedLevel != null) autoSnackLevel = int.Parse(savedLevel);
+
+        if (autoSnackLevel > 0) StartAutoSnacks();
+    }
+
     // metode der kører når man klikker
-    private void FeedPonyo()
+    private async Task FeedPonyo()
     {
         currentCount++;
         AddBubble();
+        await SaveProgress();
     }
 
     // køber auto snack upgrade
-    private void BuyAutoSnack()
+    private async Task BuyAutoSnack()
     {
         if (currentCount >= 20)
         {
@@ -77,6 +98,7 @@
             autoSnackLevel++;
 
             StartAutoSnacks();
+            await SaveProgress();
         }
     }
 
