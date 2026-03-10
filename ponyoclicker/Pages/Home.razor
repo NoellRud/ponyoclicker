@@ -8,19 +8,19 @@
 <div class="main-container">
     <p role="status">Snacks Ponyo Har Spist: @currentCount</p>
 
-    <img src="@PonyoImage" width="150" />
-    <br /><br />
+    <img src="@PonyoImage" />
+  
 
     <button class="btn-snacks" @onclick="FeedPonyo">🍟Snacks🍟</button>
 
-    <br /><br />
+    
 
     <!-- Upgrade knap -->
     <button class="btn-autosnack" @onclick="BuyAutoSnack">
         Køb 🧸 (Koster: 20 snacks)
     </button>
 
-    <p><br />En 🧸 giver 1 automatisk snack i sekundet</p>
+    <p>En 🧸 giver 1 automatisk snack i sekundet</p>
     <p>Antal Bamser: @autoSnackLevel</p>
 
     <!-- Progress bar -->
