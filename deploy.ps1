@@ -27,7 +27,7 @@ if (-not (Test-Path "404.html")) {
 (Get-Content 404.html) -replace '<base href="/" />', '<base href="/ponyoclicker/" />' | Set-Content 404.html
 
 # Push
-git add _framework css images index.html 404.html ponyoclicker.styles.css
+git add _framework css images sounds index.html 404.html ponyoclicker.styles.css
 git commit -m "Deploy"
 git push origin gh-pages
 
