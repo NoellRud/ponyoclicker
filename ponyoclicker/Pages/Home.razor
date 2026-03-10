@@ -17,7 +17,7 @@
 
     <!-- Upgrade knap -->
     <button class="btn-autosnack" @onclick="BuyAutoSnack">
-        Køb 🧸 (Koster: 20 snacks)
+        Køb 🧸 (Koster: @autoSnackPrice snacks)
     </button>
 
     <p>En 🧸 giver 1 automatisk snack i sekundet</p>
@@ -56,7 +56,10 @@
     // deklaretion af bobler
     private List<Bubble> bubbles = new();
 
-    // 
+    // beregner pris baseret på antal af bamser
+    private int autoSnackPrice => 20 + (autoSnackLevel * 10);
+
+    // liste til nye bobler
     private Random rand = new();
 
     // variabel til levels
@@ -92,9 +95,9 @@
     // køber auto snack upgrade
     private async Task BuyAutoSnack()
     {
-        if (currentCount >= 20)
+        if (currentCount >= autoSnackPrice)
         {
-            currentCount -= 20;
+            currentCount -= autoSnackPrice;
             autoSnackLevel++;
 
             StartAutoSnacks();
