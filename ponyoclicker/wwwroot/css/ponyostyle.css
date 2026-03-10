@@ -211,6 +211,25 @@ img {
         box-shadow: 0 5px 10px rgba(255, 140, 207, 0.6);
     }
 
+    /* slet knappet */
+.btn-reset {
+    background: linear-gradient(135deg, #ffb3b3, #ff4d4d);
+    border: 2px solid #cc0000;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px rgba(255, 100, 100, 0.4);
+    transition: all 0.2s ease;
+}
+
+    .btn-reset:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba(255, 100, 100, 0.6);
+    }
+
 /* loading UI */
 .loading-container {
     width: fit-content;
