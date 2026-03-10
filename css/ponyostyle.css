@@ -192,6 +192,7 @@ img {
 
 /* auto-snack knappen */
 .btn-autosnack {
+    margin-top: 15px;
     background: linear-gradient(135deg, #ff99c1, #ff4d94);
     border: 2px solid #cc2d84;
     border-radius: 25px;
