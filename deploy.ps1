@@ -1,6 +1,8 @@
 # Gem deploy.ps1 i master først
 git add deploy.ps1
-git commit -m "Opdater deploy script"
+git add ponyoclicker/wwwroot/css/ponyostyle.css
+git add ponyoclicker/Pages/Home.razor
+git commit -m "Opdater kode og deploy script"
 git push origin master
 
 # Byg projektet
@@ -9,7 +11,7 @@ dotnet publish -c Release
 cd ..
 
 # Skift til gh-pages
-git checkout gh-pages
+git checkout -f gh-pages
 
 # Kopier filer
 xcopy /E /Y ponyoclicker\bin\Release\net9.0\publish\wwwroot\* .
