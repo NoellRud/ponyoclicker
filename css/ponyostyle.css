@@ -1,0 +1,260 @@
+body {
+    background: linear-gradient(135deg, #ffe6f0, #ffd6ec);
+    min-height: 100vh; /* fylder hele siden */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+/* for at fjerne error ui fejl */
+#blazor-error-ui {
+    display: none;
+    animation: showError 0s 3s forwards;
+}
+
+@keyframes showError {
+    to {
+        display: block;
+    }
+}
+
+/* sikrer at alt centreres i midten */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* tekst stil */
+.progress-text, p {
+    font-weight: bold;
+    color: #cc2d84;
+}
+
+/* overskrifter */
+h1 {
+    color: #ff66b2;
+    text-shadow: 2px 2px #ffd6ec;
+    font-size: 2.5vw; /*skalerer med viewport */
+}
+
+/* progress bar container */
+.progress-kawaii {
+    width: 300px;
+    height: 25px;
+    background-color: #ffd6ec;
+    border-radius: 20px;
+    border: 2px solid #ff8fcf;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ffc2e2;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient( 90deg, #ff8fcf, #ff66b2, #ff8fcf );
+    transition: width 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-text {
+    font-weight: bold;
+    color: #cc2d84;
+}
+
+/* tilføjer emoji animation */
+.progress-fill {
+    height: 100%;
+    background: linear-gradient( 90deg, #ff8fcf, #ff66b2, #ff8fcf );
+    position: relative; /* vigtigt for positionen */
+    overflow: hidden;
+    transition: width 0.4s ease;
+}
+
+/* emoji animation som span */
+.progress-emojis {
+    position: absolute;
+    top: 0;
+    left: -50px; /* starter udenfor venstre */
+    font-size: 18px;
+    animation: sparkleMove 2s linear infinite;
+    pointer-events: none; /* så emoji ikke blokkerer klik */
+}
+
+
+/* animation: bevæg emojis fra venstre mod højre */
+@keyframes sparkleMove {
+    0% {
+        left: -50px;
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0.2;
+    }
+}
+
+/* knapper */
+.btn-primary, .btn-success {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(255, 140, 207, 0.5);
+    transition: all 0.2s ease;
+}
+
+    .btn.btn-primary:hover, .btn-success:hover {
+        transform: translateY(-2px) scale(1.05);
+    }
+
+/* svævende bobler animation */
+.bubble {
+    position: absolute;
+    font-size: 16px;
+    animation: bubbleMove 2s ease-out forwards;
+}
+
+@keyframes bubbleMove {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-60px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* snack counter pop animation */
+.pop {
+    animation: popAnim 0.5s ease forwards;
+}
+
+@keyframes popAnim {
+    0% {
+        transform: scale(1);
+        color: #ff66b2;
+    }
+
+    50% {
+        transform: scale(1.5);
+        color: #ffb3d9;
+    }
+
+    100% {
+        transform: scale(1);
+        color: #ff66b2;
+    }
+}
+
+/* snack knappen */
+.btn-snacks {
+    background: linear-gradient(135deg, #ffb3d9, #ff66b2);
+    border: 3px solid #cc2d84;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 16px 35px;
+    box-shadow: 0 4px 8px rgba(255, 140, 207, 0.5);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-snacks:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(255, 140, 207, 0.8);
+    }
+
+/* auto-snack knappen */
+.btn-autosnack {
+    background: linear-gradient(135deg, #ff99c1, #ff4d94);
+    border: 2px solid #cc2d84;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 25px;
+    box-shadow: 0 3px 6px rgba(255, 140, 207, 0.4);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-autosnack:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 10px rgba(255, 140, 207, 0.6);
+    }
+
+/* loading UI */
+.loading-container {
+    width: fit-content;
+    gap: 10px
+}
+
+.folder {
+    width: min-content;
+    margin: auto;
+    animation: float 2s infinite linear;
+}
+
+    .folder .top {
+        background-color: #FF8F56;
+        width: 60px;
+        height: 12px;
+        border-top-right-radius: 10px;
+    }
+
+    .folder .bottom {
+        background-color: #FFCE63;
+        width: 100px;
+        height: 70px;
+        box-shadow: 5px 5px 0 0 #283149;
+        border-top-right-radius: 8px;
+    }
+
+.container .title {
+    font-size: .9em;
+    color: #283149;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-25px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
