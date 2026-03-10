@@ -3,6 +3,7 @@ git add deploy.ps1
 git add ponyoclicker/wwwroot/css/ponyostyle.css
 git add ponyoclicker/Pages/Home.razor
 git add ponyoclicker/wwwroot/images/
+git add ponyoclicker/wwwroot/sounds/
 git commit -m "Opdater kode og deploy script"
 git push origin master
 
