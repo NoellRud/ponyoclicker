@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ponyoclicker",
   "resources": {
-    "hash": "sha256-rStYGDpj3SuOB5SLnKwma2Pqq+017Y3P4XJUAL7O5bg=",
+    "hash": "sha256-W6+RiRel6/NexHjFWIZG17YeLBBrTV7qv/z0mNZ52dE=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.y8jtbkduhx.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.sxfdi1rlxf.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -32,13 +32,13 @@
       "System.ObjectModel.pkusu96sda.wasm": "System.ObjectModel.wasm",
       "System.Private.Uri.4mj2duva8u.wasm": "System.Private.Uri.wasm",
       "System.Runtime.InteropServices.JavaScript.lu7n7av6ff.wasm": "System.Runtime.InteropServices.JavaScript.wasm",
-      "System.Runtime.44z1st9vwb.wasm": "System.Runtime.wasm",
+      "System.Runtime.8tjfgbcesv.wasm": "System.Runtime.wasm",
       "System.Text.Encodings.Web.9rjk8as0i7.wasm": "System.Text.Encodings.Web.wasm",
       "System.Text.Json.15h333vn2t.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "System.Text.RegularExpressions.wasm",
       "System.8rv0tdtrxz.wasm": "System.wasm",
       "System.Private.CoreLib.87ctwqiffb.wasm": "System.Private.CoreLib.wasm",
-      "ponyoclicker.sostzj7b7x.wasm": "ponyoclicker.wasm",
+      "ponyoclicker.vlbeuwamsx.wasm": "ponyoclicker.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.l4ptthxatg.js": "dotnet.native.js",
       "dotnet.native.d2w7colv7e.wasm": "dotnet.native.wasm",
@@ -94,12 +94,12 @@
       "System.Net.Primitives.om9mt4c0ro.wasm": "sha256-QGfRxDDetU99gZZiBvpOeKywUoZ1QVAfJ0vfm6HWcb4=",
       "System.ObjectModel.pkusu96sda.wasm": "sha256-N3QsyzYPkkbmRuX5kJji/PIHqdPnn+6SYS7PjEii3T8=",
       "System.Private.Uri.4mj2duva8u.wasm": "sha256-zKTflPTA4Fltc4PQTI3hk9yoT7mlqdj9ydA9BpuGVpg=",
-      "System.Runtime.44z1st9vwb.wasm": "sha256-/Bdv6tYR7Ve14ndOjS6ka/0H2YCliOFoIGzZPHy7wO4=",
+      "System.Runtime.8tjfgbcesv.wasm": "sha256-DG6uyzZId8JdcJzLHftdIJyKXw01LI7VOD0b6ocX0ZY=",
       "System.Text.Encodings.Web.9rjk8as0i7.wasm": "sha256-+y7W1KnwkH6Qwrz33TSxWAn666Cbuzvn6QwDB/OpQgI=",
       "System.Text.Json.15h333vn2t.wasm": "sha256-ewfAWl8DuTyvZPCN4KtKaK4zXECxzH+IWRudmvzCogI=",
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "sha256-tWq9vht0rY9iM6tvHI4CaV2Nogm0sR+EJEOy72TVrIk=",
       "System.8rv0tdtrxz.wasm": "sha256-xMF0eauQ5DkSzUozHLFFMQnL6DSJO09nJLtgag+Dzbw=",
-      "ponyoclicker.sostzj7b7x.wasm": "sha256-hGre93bydJrKMQ9jtmfsq3sUgS5fUMpc53CYdQX8cio="
+      "ponyoclicker.vlbeuwamsx.wasm": "sha256-vU/AEgKfAFrVQGhQBOTYnzfZ6+uZaUxY6t8ET+KDZzE="
     }
   },
   "cacheBootResources": true,
