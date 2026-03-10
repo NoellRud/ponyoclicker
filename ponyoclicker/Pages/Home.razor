@@ -33,7 +33,12 @@
     </div>
 
     <!-- Baggrunds musik -->
-    <iframe src="https://www.youtube.com/embed/n61ULEU7CO0?autoplay=1&loop=1&playlist=n61ULEU7CO0&controls=0"
+    <button class="btn-music" @onclick="ToggleMusic">
+        @(musicPlaying ? "🎵 Musik til" : "🔇 Musik fra")
+    </button>
+
+    <iframe id="musicFrame"
+            src="@musicSrc"
             allow="autoplay"
             style="position:fixed; top:-9999px; left:-9999px; width:1px; height:1px;"
             tabindex="-1">
@@ -104,6 +109,18 @@
         autoSnackLevel = 0;
         autoTimer?.Stop();
         autoTimer = null;
+    }
+
+    // baggrunds musik
+    private bool musicPlaying = false;
+    private string musicSrc = "";
+
+    private void ToggleMusic()
+    {
+        musicPlaying = !musicPlaying;
+        musicSrc = musicPlaying
+            ? "https://www.youtube.com/embed/n61ULEU7CO0?autoplay=1&loop=1&playlist=n61ULEU7CO0&controls=0"
+            : "";
     }
     
     // metode der kører når man klikker
