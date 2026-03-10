@@ -29,11 +29,6 @@
 
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script>
-        function playLevelUpSound() {
-            var audio = new Audio('sounds/nomsound.mp3');
-            audio.play();
-        }
-
         Blazor.start().then(() => {
             console.log("✅ Blazor OK");
         }).catch(err => {
