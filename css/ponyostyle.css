@@ -45,12 +45,18 @@ html {
 h1 {
     color: #ff66b2;
     text-shadow: 2px 2px #ffd6ec;
-    font-size: 2.5vw; /*skalerer med viewport */
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /*skalerer med viewport */
+}
+
+/* billeder */
+img {
+    width: clamp(100px, 30vw, 200px);
+    height: auto;
 }
 
 /* progress bar container */
 .progress-kawaii {
-    width: 300px;
+    width: min(300px, 80vw);
     height: 25px;
     background-color: #ffd6ec;
     border-radius: 20px;
@@ -241,8 +247,9 @@ h1 {
 #app {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
 }
 
 @keyframes float {
