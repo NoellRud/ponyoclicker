@@ -58,7 +58,7 @@ img {
 .btn-music {
     position: fixed;
     top: 15px;
-    left: 15px;
+    right: 15px;
     background: linear-gradient(135deg, #ffb3d9, #ff66b2);
     border: 2px solid #cc2d84;
     border-radius: 20px;
@@ -71,10 +71,10 @@ img {
     z-index: 999;
 }
 
-    .btn-music:hover {
-        transform: scale(1.1);
-        box-shadow: 0 5px 10px rgba(255, 140, 207, 0.8);
-    }
+.btn-music:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(255, 140, 207, 0.8);
+}
 
 /* progress bar container */
 .progress-kawaii {
