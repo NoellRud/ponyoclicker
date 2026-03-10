@@ -73,7 +73,7 @@
     protected override async Task OnInitializedAsync()
     {
         var savedCount = await JS.InvokeAsync<string>("localStorage.getItem", "snackCount");
-        var savedLevel = await JS.InvokeAsync<string>("lovalStorage.getItem", "autoSnackLevel");
+        var savedLevel = await JS.InvokeAsync<string>("localStorage.getItem", "autoSnackLevel");
 
         if (savedCount != null) currentCount = int.Parse(savedCount);
         if (savedLevel != null) autoSnackLevel = int.Parse(savedLevel);
