@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ponyoclicker",
   "resources": {
-    "hash": "sha256-baVodu0eZe4igcUNrjjAEsTZMJrAW0OPymfxJgDk+Uc=",
+    "hash": "sha256-p0vPA60fOinTe+q7FhYfjxii79rwrK2LsD5TCJW3L8Y=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.vaguo9cmq0.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.sxfdi1rlxf.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -21,7 +21,7 @@
       "System.Collections.Immutable.6ki1ylmf7z.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.i484wke5kw.wasm": "System.Collections.wasm",
       "System.ComponentModel.Primitives.wglichifzn.wasm": "System.ComponentModel.Primitives.wasm",
-      "System.ComponentModel.TypeConverter.4k5mjzjhfl.wasm": "System.ComponentModel.TypeConverter.wasm",
+      "System.ComponentModel.TypeConverter.fapok6hmzd.wasm": "System.ComponentModel.TypeConverter.wasm",
       "System.ComponentModel.nu6ttwym4t.wasm": "System.ComponentModel.wasm",
       "System.Console.tvcofgaxpb.wasm": "System.Console.wasm",
       "System.IO.Pipelines.wn1erg3up3.wasm": "System.IO.Pipelines.wasm",
@@ -38,7 +38,7 @@
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "System.Text.RegularExpressions.wasm",
       "System.8rv0tdtrxz.wasm": "System.wasm",
       "System.Private.CoreLib.87ctwqiffb.wasm": "System.Private.CoreLib.wasm",
-      "ponyoclicker.hnum5btxj4.wasm": "ponyoclicker.wasm",
+      "ponyoclicker.a5mqz1saem.wasm": "ponyoclicker.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.l4ptthxatg.js": "dotnet.native.js",
       "dotnet.native.d2w7colv7e.wasm": "dotnet.native.wasm",
@@ -84,7 +84,7 @@
       "System.Collections.Immutable.6ki1ylmf7z.wasm": "sha256-yvXj+BY8lfn2bP3iPC4VzYYEWvO8bGtoTCqiNsfgg4A=",
       "System.Collections.i484wke5kw.wasm": "sha256-3u2l840qt4yMmpX0gMzCh1FPBsXLOM+r5uoIp5vdbiA=",
       "System.ComponentModel.Primitives.wglichifzn.wasm": "sha256-MI155xcjTQ4mEtTTphXWxqSZ5eM086lDx6Hp8PyinQM=",
-      "System.ComponentModel.TypeConverter.4k5mjzjhfl.wasm": "sha256-pJSu97U2DtIwVnrUUKFxwU4bfR36Da1/qCt2038WMhE=",
+      "System.ComponentModel.TypeConverter.fapok6hmzd.wasm": "sha256-+W09n0/cGmjUsbOJIs5XOFsqD3+1T330PU5tHbISiy0=",
       "System.ComponentModel.nu6ttwym4t.wasm": "sha256-EdstTP9IiGWSnfAiUfYQU/+yVLpIFnkDsEhkbUYb1Bk=",
       "System.Console.tvcofgaxpb.wasm": "sha256-OeYtPvMXSeoK79gTKBykKKWIjeiDUDEnMa/AHbAAj/I=",
       "System.IO.Pipelines.wn1erg3up3.wasm": "sha256-FBW6K4TORa24v2L639DPjf309NTGkrj0iIqiJaPqcYA=",
@@ -99,7 +99,7 @@
       "System.Text.Json.15h333vn2t.wasm": "sha256-ewfAWl8DuTyvZPCN4KtKaK4zXECxzH+IWRudmvzCogI=",
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "sha256-tWq9vht0rY9iM6tvHI4CaV2Nogm0sR+EJEOy72TVrIk=",
       "System.8rv0tdtrxz.wasm": "sha256-xMF0eauQ5DkSzUozHLFFMQnL6DSJO09nJLtgag+Dzbw=",
-      "ponyoclicker.hnum5btxj4.wasm": "sha256-U3o8N7U/WDCFSbSkqX0RvYppxUe/RDTwj1n3dovdWI8="
+      "ponyoclicker.a5mqz1saem.wasm": "sha256-YianQ44ngCXQjujTIXCzP/b3sni01iNge6T72CvIYfo="
     }
   },
   "cacheBootResources": true,
