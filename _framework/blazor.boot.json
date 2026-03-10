@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ponyoclicker",
   "resources": {
-    "hash": "sha256-RxeVx7uw9N65rhaD345ygrji3IBMz2lEPoYf9kYw8SU=",
+    "hash": "sha256-Yxf37EBXr8yA0OCIZ8EpknF754h9zuCpAInTdbzJRhE=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.y8jtbkduhx.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.sxfdi1rlxf.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -38,7 +38,7 @@
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "System.Text.RegularExpressions.wasm",
       "System.8rv0tdtrxz.wasm": "System.wasm",
       "System.Private.CoreLib.87ctwqiffb.wasm": "System.Private.CoreLib.wasm",
-      "ponyoclicker.t9ziw0lyn0.wasm": "ponyoclicker.wasm",
+      "ponyoclicker.qj0b2mxxqg.wasm": "ponyoclicker.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.l4ptthxatg.js": "dotnet.native.js",
       "dotnet.native.d2w7colv7e.wasm": "dotnet.native.wasm",
@@ -99,7 +99,7 @@
       "System.Text.Json.15h333vn2t.wasm": "sha256-ewfAWl8DuTyvZPCN4KtKaK4zXECxzH+IWRudmvzCogI=",
       "System.Text.RegularExpressions.5gjltihx5v.wasm": "sha256-tWq9vht0rY9iM6tvHI4CaV2Nogm0sR+EJEOy72TVrIk=",
       "System.8rv0tdtrxz.wasm": "sha256-xMF0eauQ5DkSzUozHLFFMQnL6DSJO09nJLtgag+Dzbw=",
-      "ponyoclicker.t9ziw0lyn0.wasm": "sha256-74wW0gWh4me3iyuJmiJmJWISduFNMRwWeHTTLUq6Lbs="
+      "ponyoclicker.qj0b2mxxqg.wasm": "sha256-en6JwaKkJ83D+d2i9tesDtbxB241nXrir+MFeWUNdO4="
     }
   },
   "cacheBootResources": true,
