@@ -50,9 +50,9 @@ h1 {
 
 /* billeder */
 img {
-    width: 200px; /* fast størrelse */
-    height: 200px;
-    object-fit: contain; /* bevarer proportioner uden at strække */
+    
+    height: 150px;
+    
 }
 
 /* musik */
