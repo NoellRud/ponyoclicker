@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponyo Clicker</title>
+    <base href="/ponyoclicker/" />
+    <link href="css/ponyostyle.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="loading-container">
+            <div class="folder">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            <div class="title">Loading Ponyo Clicker...</div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script>
+        Blazor.start().then(() => {
+            console.log("✅ Blazor OK");
+        }).catch(err => {
+            alert("Fejl: " + err.message);
+        });
+
+        window.addEventListener('error', function (e) {
+            alert("Window fejl: " + e.message + "\nFil: " + e.filename + "\nLinje: " + e.lineno);
+        });
+
+        window.addEventListener('unhandledrejection', function (e) {
+            alert("Uhandlet promise fejl: " + e.reason);
+        });
+    </script>
+</body>
