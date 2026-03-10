@@ -213,21 +213,24 @@ img {
 
     /* slet knappet */
 .btn-reset {
-    background: linear-gradient(135deg, #ffb3b3, #ff4d4d);
-    border: 2px solid #cc0000;
-    border-radius: 25px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ffb3d9, #ff66b2);
+    border: 2px solid #cc2d84;
+    border-radius: 20px;
     color: white;
     font-weight: bold;
-    font-size: 0.9rem;
-    padding: 8px 20px;
-    margin-top: 20px;
-    box-shadow: 0 3px 6px rgba(255, 100, 100, 0.4);
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    box-shadow: 0 3px 6px rgba(255, 140, 207, 0.5);
     transition: all 0.2s ease;
+    z-index: 999;
 }
 
     .btn-reset:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 10px rgba(255, 100, 100, 0.6);
+        transform: scale(1.1);
+        box-shadow: 0 5px 10px rgba(255, 140, 207, 0.8);
     }
 
 /* loading UI */
