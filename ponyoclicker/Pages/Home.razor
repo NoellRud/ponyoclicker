@@ -57,7 +57,7 @@
     private List<Bubble> bubbles = new();
 
     // beregner pris baseret på antal af bamser
-    private int autoSnackPrice => 20 + (autoSnackLevel * 10);
+    private int autoSnackPrice => (int)(50 * Math.Pow(2, autoSnackLevel));
 
     // liste til nye bobler
     private Random rand = new();
